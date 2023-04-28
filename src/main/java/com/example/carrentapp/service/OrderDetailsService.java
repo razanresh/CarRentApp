@@ -14,4 +14,6 @@ public interface OrderDetailsService {
     OrderDetails getById(Long Id);
     List<OrderDetails> getAll();
     OrderDetails getByLogin(String login);
+
+    List<OrderDetails> getAllByCarsCostBetween(Double a, Double b);
 }

@@ -1,6 +1,7 @@
 package com.example.carrentapp.service;
 
 import com.example.carrentapp.model.Car;
+import com.example.carrentapp.model.Image;
 import com.example.carrentapp.model.UserAccount;
 import com.example.carrentapp.model.enums.Category;
 import com.example.carrentapp.model.enums.Color;
@@ -13,7 +14,7 @@ import java.util.List;
 @Service
     public interface CarService {
     Car create(Car car);
-    Car update(Car car);
+    Car update(Long id, Car car);
     Car deleteById(Long id);
     List<Car> getAll();
     Car getById(Long id);
@@ -33,4 +34,7 @@ import java.util.List;
     List<Car> findByIsAvailable(Boolean isAvailable);
     List<Car> findByPrice(Double price);
 
+    Car changeAvailable(Long carId, Boolean isAvailable);
+
+    Car updateImage(Long carId, Image image);
     }

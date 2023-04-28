@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public interface PriceService {
     Price create(PriceDTO priceDTO);
-    Price update(PriceDTO priceDTO);
+    Price update(Long id,PriceDTO priceDTO);
     Price getById(Long id);
     Price deleteById(Long id);
     List<PriceDTO>getAll();

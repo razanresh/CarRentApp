@@ -27,6 +27,8 @@ public class UserAccount {
     @Column(name = "phone_number", nullable = false, unique = true)
     private String phoneNumber;
 
+    @Column(name)
+    private String password;
     @Column(name = "login", nullable = false, unique = true)
     private String login;
 

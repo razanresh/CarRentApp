@@ -35,6 +35,8 @@ public class Car {
     private Boolean isAvailable;
     @OneToMany(mappedBy = "tb_price")
     private List<Price> price;
-
+    @OneToOne
+    @JoinColumn(name = "image_id")
+    private Image image;
 
 }
